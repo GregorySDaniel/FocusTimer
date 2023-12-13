@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --hue: 194;
+  --backgroud-color: hsla(var(--hue), 9%, 89%, 1);
+  --backgroud-color-pressed: hsla(var(--hue), 97%, 51%, 1);
+}
+
+body{
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  min-width: 62rem;
+}
+
+h1{
+  font-size: 12.6rem;
+}
+
+#controlers{
+  display: flex;
+  font-weight: bold;
+  gap: 4rem;
+}
+
+#controlers button{
+  font-size: 4.8rem;
+}
+
+button{
+  border: 0;
+  cursor: pointer;
+  background: 0;
+  transition-duration: 0.5s;
+}
+
+button:hover{
+  transform: translateY(-5px);
+}
+
+#environments{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 3.2rem;
+}
+
+#environments button{
+  font-size: 7rem;
+  padding: 2.4rem;
+  border-radius: 1.4rem;
+}
+
+#environments button:not(.pressed){
+  background: var(--backgroud-color);
+}
+
+.running .ph-play-circle, html:not(.running) .ph-pause-circle{
+  display: none;
+}
+
+.pressed{
+  background: var(--backgroud-color-pressed);
+  color: white;
+}
